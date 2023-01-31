@@ -1,0 +1,40 @@
+@import "variables";
+
+p {
+  font-family: $defaultFontRegular;
+  font-size: $defaultFontSize;
+
+  margin: 0px;
+}
+
+mat-toolbar {
+  display: flex;
+
+  background-color: lightgrey;
+}
+
+span {
+  padding-left: 20px;
+
+  vertical-align: middle;
+
+  &.name {
+    font-family: $defaultFontThin;
+    font-size: 44px;
+  }
+
+  &.purpose {
+    font-family: $defaultFontBold;
+  }
+
+  &.powered-by {
+    font-size: 12px;
+  }
+
+  &.spacer {
+    flex: 1 1 auto;
+  }
+}
+
+
+

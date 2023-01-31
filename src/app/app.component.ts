@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AngularMaterialModule } from './shared/modules/angular-material/angular-material.module';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dzenda';
+  applicationName: string;
+
+  constructor(private router: Router) {
+    this.applicationName = 'D Ž E N D A';
+
+    console.log("AppComponent.constructor: Finished")
+  }
 }
