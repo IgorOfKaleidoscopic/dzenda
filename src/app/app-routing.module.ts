@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { SplashComponent } from './features/splash/splash.component';
-import { AgendaComponent } from './features/agenda/agenda.component';
 import { PocComponent } from './features/poc/poc.component';
 
 const routes: Routes = [
@@ -18,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'agenda',
-    component: AgendaComponent
+    loadChildren: () => import('./features/agenda/agenda.module').then(m => m.AgendaModule)
   },
   {
     path: 'poc',

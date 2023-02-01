@@ -1,1 +1,29 @@
-<p>Pľac pre agendu</p>
+<div>
+  <h2>
+    Projects
+  </h2>
+  <div>
+    <table>
+      <tbody>
+        <tr *ngFor="let cursorProject of projects">
+          <td>
+            {{cursorProject.name}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tbody>
+        <tr *ngFor="let cursorTask of tasks">
+          <td>
+            {{cursorTask.subject}}
+            {{cursorTask.detail}}
+            {{cursorTask.deadline}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { AngularMaterialModule } from './shared/modules/angular-material.module';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +8,7 @@ import { AngularMaterialModule } from './shared/modules/angular-material.module'
 export class AppComponent {
   applicationName: string;
 
-  constructor(private router: Router) {
+  constructor() {
     this.applicationName = 'D Ž E N D A';
 
     console.log("AppComponent.constructor: Finished")

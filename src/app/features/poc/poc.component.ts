@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-poc',
   templateUrl: './poc.component.html',
@@ -9,6 +10,4 @@ export class PocComponent {
 
   constructor() {
   }
-
-
 }
