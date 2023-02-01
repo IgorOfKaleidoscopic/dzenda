@@ -3,8 +3,6 @@
 div {
   min-height: 400px;
 
-  margin: 0px;
-
   background-image: url('https://images.unsplash.com/photo-1623150502742-6a849aa94be4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
 }
 
@@ -13,22 +11,11 @@ p {
 }
 
 .text {
-  position: relative;
-  left:300px;
-  bottom:0px;
-  right: 0px;
-  top: 0px;
+  position: fixed;
+  left:80px;
+  top:120px;
 
   font-family: $defaultFontRegular;
-  font-size: 22px;
 
   color:ghostwhite;
 }
-
-.symbol {
-  @extend .text;
-
-  font-family: $defaultFontBold;
-  font-size: 216px;
-}
-

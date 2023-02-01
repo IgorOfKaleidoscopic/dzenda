@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AngularMaterialModule } from './shared/modules/angular-material/angular-material.module';
+import { AngularMaterialModule } from './shared/modules/angular-material.module';
 
 @Component({
   selector: 'app-root',

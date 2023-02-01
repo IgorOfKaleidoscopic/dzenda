@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AngularMaterialModule } from './shared/modules/angular-material/angular-material.module';
+import { AngularMaterialModule } from './shared/modules/angular-material.module';
 
 import { AppComponent } from './app.component';
 
