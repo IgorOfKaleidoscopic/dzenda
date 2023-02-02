@@ -15,16 +15,16 @@ export class AgendaComponent {
 
   constructor(private dataService:DataService) {
     if (dataService.isDataInLocalStorage()) {
-      console.log('AgendaComponent:constructor() data was made persistent once');
+      console.log('AgendaComponent:constructor() data available in localStorage');
 
       dataService.readDataFromLocalStorage();
+
+      this.projects = dataService.getProjects();
+      this.tasks = dataService.getTasks();
     }
     else {
-      console.log('AgendaComponent:constructor() data was not made persistent ever or localStorage has been cleared');
+      console.log('AgendaComponent:constructor() data unavailable in localStorage');
     }
-
-    this.projects = dataService.getProjects();
-    this.tasks = dataService.getTasks();
 
     console.log('AgendaComponent:constructor() exit');
   }

@@ -12,14 +12,6 @@ export class DataService {
   tasks:ITask [] = [];
 
   constructor() {
-    this.projects.push(new Project(1, "Umenie"));
-    this.projects.push(new Project(2, "Software"));
-
-    this.tasks.push(new Task(1, 1, 'Hudobna teoria', 'Vyskusaj precitane z hudobnej teorie', dayjs('2024-03-11', 'YYYY-MM-DD')));
-    this.tasks.push(new Task(2, 1, 'Kresba', 'Urob si kurz ilustracie', dayjs('2024-03-01', 'YYYY-MM-DD')));
-    this.tasks.push(new Task(1, 2, 'Obsidian', 'Migruj data do Obsidianu', dayjs('2024-05-05', 'YYYY-MM-DD')));
-    this.tasks.push(new Task(2, 2, 'UX', 'Citaj knihu o UX', dayjs('2024-01-11', 'YYYY-MM-DD')));
-
     console.log('AgendaDataService:constructor() exit');
   }
 
@@ -35,21 +27,35 @@ export class DataService {
     return this.tasks;
   }
 
-  writeDataToLocalStorage():void {
+  resetData(): void {
+    this.projects.length = 0;
+    this.projects.push(new Project(1, "Umenie"));
+    this.projects.push(new Project(2, "Software"));
+
+    this.tasks.length = 0;
+    this.tasks.push(new Task(1, 1, 'Hudobna teoria', 'Vyskusaj precitane z hudobnej teorie', dayjs('2024-03-11', 'YYYY-MM-DD')));
+    this.tasks.push(new Task(2, 1, 'Kresba', 'Urob si kurz ilustracie', dayjs('2024-03-01', 'YYYY-MM-DD')));
+    this.tasks.push(new Task(1, 2, 'Obsidian', 'Migruj data do Obsidianu', dayjs('2024-05-05', 'YYYY-MM-DD')));
+    this.tasks.push(new Task(2, 2, 'UX', 'Citaj knihu o UX', dayjs('2024-01-11', 'YYYY-MM-DD')));
+
+    console.log('AgendaDataService:resetData() exit');
+  }
+
+  writeDataToLocalStorage(): void {
     localStorage.setItem('dzenda-projects', JSON.stringify(this.projects));
     localStorage.setItem('dzenda-tasks', JSON.stringify(this.tasks));
 
     console.log('AgendaDataService:writeDataToLocalStorage() exit');
   }
 
-  readDataFromLocalStorage():void {
+  readDataFromLocalStorage(): void {
     this.projects = JSON.parse(localStorage.getItem('dzenda-projects') as string);
     this.tasks = JSON.parse(localStorage.getItem('dzenda-tasks') as string);
 
     console.log('AgendaDataService:readDataFromLocalStorage() exit');
   }
 
-  isDataInLocalStorage():boolean {
+  isDataInLocalStorage(): boolean {
     if (typeof localStorage.getItem('dzenda-projects') === 'string' ) return true; else return false;
   }
 

@@ -16,8 +16,12 @@ export class AppComponent {
     console.log("AppComponent.constructor: Finished")
   }
 
-  writeDataToLocalStorage() {
+  writeDataToLocalStorage(): void {
     this.dataService.writeDataToLocalStorage();
+  }
+
+  resetData(): void {
+    this.dataService.resetData();
   }
 
   clearLocalStorage() {
