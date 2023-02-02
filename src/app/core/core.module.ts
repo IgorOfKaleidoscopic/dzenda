@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 
-import { AgendaDataService } from './agenda-data/agenda-data.service';
-import { LocalPersistenceService } from './local-persistence/local-persistence.service';
+import { DataService } from './data/data.service';
+
 
 @NgModule({
   declarations: [],
   imports: [
   ],
   providers: [
-    AgendaDataService,
-    LocalPersistenceService
+    DataService
   ]
 })
 export class CoreModule { }
